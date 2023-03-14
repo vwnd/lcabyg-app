@@ -1,5 +1,5 @@
 <template>
-  <div>Home View</div>
+  <h1 class="text-3xl font-bold underline">Home View</h1>
 </template>
 
 <script setup lang="ts"></script>
