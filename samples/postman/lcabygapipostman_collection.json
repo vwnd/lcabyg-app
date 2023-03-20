@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "9de5dc4d-6c3b-4eb6-9104-8b5b9b6618f8",
+		"name": "LCAbygAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14353033"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/login",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "386e12a6-ee89-4e72-a6d8-1c3c5d95a24f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/account",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jobs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "386e12a6-ee89-4e72-a6d8-1c3c5d95a24f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/jobs",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get job by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "386e12a6-ee89-4e72-a6d8-1c3c5d95a24f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/jobs/8eac4499-1173-402c-80c1-c4aa84b3f158",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"jobs",
+						"8eac4499-1173-402c-80c1-c4aa84b3f158"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "386e12a6-ee89-4e72-a6d8-1c3c5d95a24f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"priority\": 0,\r\n    \"job_target\": \"lcabyg5+br23\",\r\n    \"job_target_min_ver\": \"\",\r\n    \"job_target_max_ver\": \"\",\r\n    \"job_arguments\": \"\",\r\n    \"extra_input\": \"\",\r\n    \"input_blob\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/jobs",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get job input by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "386e12a6-ee89-4e72-a6d8-1c3c5d95a24f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/jobs/8eac4499-1173-402c-80c1-c4aa84b3f158/input",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"jobs",
+						"8eac4499-1173-402c-80c1-c4aa84b3f158",
+						"input"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get job output by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76c7184c-20bc-4b36-9829-00f218e938c0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/jobs/8eac4499-1173-402c-80c1-c4aa84b3f158/output",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"jobs",
+						"8eac4499-1173-402c-80c1-c4aa84b3f158",
+						"output"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark job as finished",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76c7184c-20bc-4b36-9829-00f218e938c0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api1.lcabyg.dk/v2/jobs/8eac4499-1173-402c-80c1-c4aa84b3f158",
+					"protocol": "https",
+					"host": [
+						"api1",
+						"lcabyg",
+						"dk"
+					],
+					"path": [
+						"v2",
+						"jobs",
+						"8eac4499-1173-402c-80c1-c4aa84b3f158"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
