@@ -1,5 +1,5 @@
 <template>
-  <div class="py-10">
-    <LoginForm />
+  <div>
+    <NuxtPage />
   </div>
 </template>

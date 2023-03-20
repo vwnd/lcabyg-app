@@ -50,23 +50,23 @@ import { ref } from 'vue'
 const username = ref('')
 const password = ref('')
 
-const { data, execute } = useFetch('https://api1.lcabyg.dk/v2/login', {
-  query: {
-    username: 'vwb@shl.dk',
-    password: 'my secret password'
-  }
-})
+const authToken = useAuthToken()
 
 async function login () {
-  const response = await $fetch('https://api1.lcabyg.dk/v2/login', {
-    method: 'POST',
-    query: {
-      username: 'vwb@shl.dk',
-      password: 'my secret password'
-    }
-  })
+  try {
+    const { data } = await useFetch('https://api1.lcabyg.dk/v2/login', {
+      method: 'POST',
+      query: {
+        username: username.value,
+        password: password.value
+      }
+    })
 
-  console.log(response)
+    authToken.value = data.value as string
+    navigateTo('/')
+  } catch (error) {
+
+  }
 }
 
 </script>
