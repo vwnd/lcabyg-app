@@ -6,5 +6,8 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {}
     }
+  },
+  typescript: {
+    shim: false
   }
 })

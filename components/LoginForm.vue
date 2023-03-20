@@ -29,7 +29,7 @@
     <button
       class="group relative inline-block text-sm font-medium text-slate-600 focus:outline-none focus:ring active:text-slate-500"
       type="submit"
-      @click="api.login(username, password)"
+      @click="($event) => login()"
     >
       <span
         class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-slate-600 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"
@@ -41,13 +41,25 @@
 </template>
 
 <script setup lang="ts">
-import { useLCABygAPI } from '@/stores/lca-byg-api'
 import { ref } from 'vue'
 
 const username = ref('')
 const password = ref('')
 
-const api = useLCABygAPI()
+async function login() {
+  const { data } = useFetch('https://api1.lcabyg.dk/v2/login', {
+    method: 'POST',
+    body: { username: username.value, password: password.value },
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: '*/*',
+      'Access-Control-Allow-Headers': '*/*'
+    }
+  })
+
+  console.log(data)
+}
 </script>
 
 <style scoped></style>
