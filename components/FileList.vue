@@ -1,13 +1,11 @@
 <template>
   <div class="flex flex-col space-y-6 md:max-w-md border border-current p-6 mx-auto">
-    <div for="file-input" class="block text-xs font-medium text-gray-700 mb-2">
+    <div class="block text-xs font-medium text-gray-700 mb-2">
       Loaded Files
     </div>
-    <div v-if="projectData.lenght > 0">
-      <div v-for="file in projectData" :key="file.fileName">
-        <div class="text-xs font-mono">
-          {{ file.fileName }}
-        </div>
+    <div v-if="projectData.length > 0">
+      <div v-for="file in projectData" :key="file.fileName" class="text-xs font-mono">
+        {{ file.fileName }}
       </div>
     </div>
     <div v-else class="text-xs font-mono">
