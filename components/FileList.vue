@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col space-y-6 md:max-w-md border border-current p-6 mx-auto">
+  <div class="flex flex-col space-y-6 md:max-w-md border border-current p-6">
     <div class="block text-xs font-medium text-gray-700 mb-2">
       Loaded Files
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col space-y-6 md:max-w-md border border-current p-6 mx-auto">
+  <div class="flex flex-col space-y-6 md:max-w-md border border-current p-6">
     <label for="file-input" class="block text-xs font-medium text-gray-700 mb-2">Data Input</label>
     <div class="mt-2 sm:col-span-2 sm:mt-0">
       <div ref="dragAndDropZone" class="flex max-w-lg justify-center border border-dashed border-slate-500 px-6 pt-5 pb-6">
