@@ -24,6 +24,9 @@ async function handleSubmit () {
     inputData = [...inputData, ...d.data]
   })
   const blob = btoa(JSON.stringify(inputData))
+  const decoded = JSON.parse(atob(blob))
+
+  console.log(blob)
 
   const { data } = await useFetch('https://api1.lcabyg.dk/v2/jobs', {
     method: 'POST',
