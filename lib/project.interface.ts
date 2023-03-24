@@ -4,5 +4,5 @@ export interface Project {
   address: string;
   owner: string;
   lca_advisor: string;
-  building_regulation_version: string;
+  building_regulation_version: 'BR2018' | string;
 }

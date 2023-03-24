@@ -1,9 +1,11 @@
+import { BuildingType } from './building-type.enum'
+
 export interface Building {
   id: string
   scenario_name: string
   locked: string
   description: {[key: string]: string}
-  building_type: string
+  building_type: BuildingType
   heated_floor_area: number
   gross_area: number
   integrated_garage: number
@@ -15,8 +17,8 @@ export interface Building {
   storey_height:number
   initial_year: number
   calculation_timespan: number
-  calculation_mode: 'BR23'
+  calculation_mode: 'BR23' | 'Normal' | 'SC'
   outside_area: number
   plot_area: number
-  energy_class: 'LowEnergy'
+  energy_class: 'LowEnergy' | string
 }
